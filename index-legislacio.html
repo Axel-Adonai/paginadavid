@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDO</title>
+    <style>
+        body {
+            background-color: #D3AB9E;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 1.8em;
+            text-align: center;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        nav {
+            background-color: #7C5D56;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #B78A82;
+        }
+
+        .contenido {
+            padding: 20px;
+            text-align: center;
+            color: #4D403B;
+        }
+
+        .seccion {
+            display: none;
+        }
+
+        .activo {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Botón flotante */
+        .boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7C5D56;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .boton-flotante:hover {
+            background-color: #B78A82;
+        }
+    </style>
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('activo'));
+            const seccionActiva = document.getElementById(id);
+            seccionActiva.classList.add('activo');
+        }
+
+        function scrollToTop() {
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Título principal -->
+    <h1>¡TECNOLOGICO DE ESTUDIOS SUPERIORES IXTAPALUCA!</h1>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#" onclick="mostrarSeccion('creadores')">Creadores</a>
+        <a href="#" onclick="mostrarSeccion('indice')">Índice</a>
+        <a href="#" onclick="mostrarSeccion('marco_teorico')">Marco Teórico</a>
+        <a href="#" onclick="mostrarSeccion('videos')">Videos</a>
+    </nav>
+
+    <!-- Sección Creadores -->
+    <div id="creadores" class="seccion contenido">
+        <h2>Creadores</h2>
+        <ul>
+            <li>SUAREZ MEDINA JESUS NATANIEL</li>
+            <li>HERNANDEZ GUADARRAMA ALAN URIEL</li>
+            <li>FERNANDO MARCO FLORES</li>
+            <li>TOLENTINO DELGADO AXEL ADONAI</li>
+        </ul>
+    </div>
+
+    <!-- Sección Índice -->
+    <div id="indice" class="seccion contenido">
+        <h2>Índice (Temario)</h2>
+        <ul>
+            <li>Unidad 1: Introducción al Derecho</li>
+            <li>Unidad 2: El Derecho y la Informática</li>
+            <li>Unidad 3: Derecho de la Información y Datos Informáticos</li>
+            <li>Unidad 4: Propiedad Intelectual y Nuevas Tecnologías</li>
+            <li>Unidad 5: Contratos Informáticos</li>
+            <li>Unidad 6: Delitos Informáticos</li>
+        </ul>
+    </div>
+
+    <!-- Sección Marco Teórico -->
+    <div id="marco_teorico" class="seccion contenido">
+        <h2>Marco Teórico</h2>
+        <h3>Unidad 1: Introducción al Derecho</h3>
+        <p><strong>1.1 Concepto y propósito del Derecho:</strong> Conjunto de normas que regulan la conducta humana para garantizar justicia y orden social.</p>
+        <p><strong>1.2 Normas Jurídicas y Morales:</strong> Diferencia entre lo obligatorio y voluntario según su aplicación social o personal.</p>
+        <p><strong>1.3 Fuentes del Derecho:</strong> Orígenes como leyes, costumbres, y principios generales.</p>
+        <p><strong>1.4 Clasificación del Derecho:</strong> Derecho público, privado y social.</p>
+
+        <h3>Unidad 2: El Derecho y la Informática</h3>
+        <p><strong>2.1 La Sociedad de la Información:</strong> Impacto de las tecnologías en la comunicación y acceso a información global.</p>
+        <p><strong>2.2 Derecho Informático:</strong> Marco jurídico que regula la tecnología y su uso.</p>
+        <p><strong>2.3 Orígenes y Clasificación:</strong> Estudio de la evolución del Derecho Informático.</p>
+        <p><strong>2.4 Informática Jurídica:</strong> Uso de herramientas tecnológicas en actividades legales.</p>
+
+        <h3>Unidad 3: Derecho de la Información</h3>
+        <p><strong>3.1 Derecho de la Información:</strong> Protege acceso y uso ético de los datos personales.</p>
+        <p><strong>3.2 Problemas de Sistematización:</strong> Dificultades para organizar datos en un marco legal.</p>
+        <p><strong>3.3 Régimen Jurídico en México:</strong> Normas que regulan la información en el país.</p>
+        <p><strong>3.4 Marco Constitucional:</strong> Derechos garantizados por la Constitución relacionados con la información.</p>
+        <p><strong>3.5 Libertad de Expresión:</strong> Derecho a opinar sin restricciones.</p>
+        <p><strong>3.6 Derecho de Petición:</strong> Facultad de los ciudadanos para solicitar información a las autoridades.</p>
+        <p><strong>3.7 Telecomunicaciones:</strong> Infraestructura que soporta la transmisión de información.</p>
+
+        <h3>Unidad 4: Propiedad Intelectual</h3>
+        <p><strong>4.1 Protección Jurídica:</strong> Salvaguarda software bajo derechos de autor.</p>
+        <p><strong>4.2 Implicaciones:</strong> Aspectos éticos y legales del uso de software.</p>
+        <p><strong>4.3 Criptografía:</strong> Técnica para proteger información a través de cifrado.</p>
+        <p><strong>4.4 Propiedad Industrial:</strong> Protege patentes y marcas de software.</p>
+        <p><strong>4.5 Normatividad Internacional:</strong> Regulaciones globales sobre propiedad intelectual.</p>
+
+        <h3>Unidad 5: Contratos Informáticos</h3>
+        <p><strong>5.1 Concepto y Elementos:</strong> Acuerdos legales entre partes sobre tecnología.</p>
+        <p><strong>5.2 Clasificación:</strong> Tipos como licencias de software y outsourcing.</p>
+        <p><strong>5.3 Características Particulares:</strong> Flexibilidad y especificidad tecnológica.</p>
+        <p><strong>5.4 Partes:</strong> Roles como proveedor y usuario.</p>
+        <p><strong>5.5 Fraudes:</strong> Riesgos en la comercialización tecnológica.</p>
+
+        <h3>Unidad 6: Delitos Informáticos</h3>
+        <p><strong>6.1 Concepto:</strong> Actos ilegales cometidos mediante tecnología.</p>
+        <p><strong>6.2 Clasificación:</strong> Hacking, robo de identidad, fraude digital, entre otros.</p>
+        <p><strong>6.3 Normatividad Nacional:</strong> Leyes mexicanas contra delitos informáticos.</p>
+        <p><strong>6.4 Normatividad Internacional:</strong> Tratados globales que regulan el cibercrimen.</p>
+    </div>
+
+    <!-- Sección Videos -->
+    <div id="videos" class="seccion contenido">
+        <h2>Videos de Estudiantes</h2>
+        <p>Pronto se añadirán videos realizados por los estudiantes.</p>
+    </div>
+
+    <!-- Botón para volver al inicio -->
+    <button class="boton-flotante" onclick="scrollToTop()">⬆</button>
+</body>
+</html>
